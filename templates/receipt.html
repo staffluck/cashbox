@@ -125,17 +125,17 @@
                <div class="t m0 x1 h2 y3 ff1 fs0 fc0 sc0 ls0">ККМ<span class="ff2 ws3"> 00075411     #3969<span class="ls1"> </span></span></div>
                <div class="t m0 x1 h2 y4 ff1 fs0 fc0 sc0 ls0">ИНН<span class="ff2 ws3"> 1087746942040<span class="ls1"> </span></span></div>
                <div class="t m0 x1 h2 y5 ff2 fs0 fc0 sc0 ls0 ws3">      <span class="ff1">ЭКЛЗ</span> 3851495566<span class="ls1"> </span></div>
-               <div class="t m0 x1 h2 y6 ff2 fs0 fc0 sc0 ls0 ws2">09.12.10<span class="ls1 ws3"> </span>15:19<span class="ls1 ws3"> </span><span class="ff1">СИС</span>.<span class="ls1 ws3"> </span></div>
+               <div class="t m0 x1 h2 y6 ff2 fs0 fc0 sc0 ls0 ws2">{{ created_at.day }}.{{ created_at.month }}.{{ created_at.year }}<span class="ls1 ws3"> </span>{{ created_at.hour }}: {{ created_at.minute }}<span class="ls1 ws3"> </span><span class="ff1">СИС</span>.<span class="ls1 ws3"> </span></div>
                <div class="t m0 x1 h2 y7 ff2 fs0 fc0 sc0 ls1 ws3"> <span class="ff1 ls0 ws1">АДМИ</span> </div>
                <div class="t m0 x1 h2 y8 ff1 fs0 fc0 sc0 ls0">НАИМЕНОВАНИЕ<span class="ff2 ws3"> </span><span class="ws1">ТОВАРА</span><span class="ff2 ls1 ws3"> </span></div>
-               <div class="t m0 x1 h2 y9 ff2 fs0 fc0 sc0 ls0 ws3">  1          =900.00<span class="ls1"> </span></div>
+               <div class="t m0 x1 h2 y9 ff2 fs0 fc0 sc0 ls0 ws3">  {{ item1.title }}          ={{ item1.price }}<span class="ls1"> </span></div>
                <div class="t m0 x1 h2 ya ff1 fs0 fc0 sc0 ls0">НАИМЕНОВАНИЕ<span class="ff2 ws3"> </span><span class="ws1">ТОВАРА</span><span class="ff2 ls1 ws3"> </span></div>
-               <div class="t m0 x1 h2 yb ff2 fs0 fc0 sc0 ls0 ws3">  1          =700.00<span class="ls1"> </span></div>
+               <div class="t m0 x1 h2 yb ff2 fs0 fc0 sc0 ls0 ws3">  {{ item2.title }}          ={{ item2.price }}<span class="ls1"> </span></div>
                <div class="t m0 x1 h2 yc ff2 fs0 fc0 sc0 ls1 ws3"> </div>
                <div class="t m0 x1 h2 yd ff2 fs0 fc0 sc0 ls1 ws3"> </div>
                <div class="t m0 x1 h2 ye ff3 fs0 fc0 sc0 ls0 ws1">ИТОГ<span class="ff4 ls1 ws3"> </span></div>
-               <div class="t m0 x1 h2 yf ff2 fs0 fc0 sc0 ls0 ws3">     <span class="ff4 ws2">1600.00<span class="ls1 ws3"> </span></span></div>
-               <div class="t m0 x1 h2 y10 ff1 fs0 fc0 sc0 ls0">НАЛИЧНЫМИ<span class="ff2 ws3">     =1600.00<span class="ls1"> </span></span></div>
+               <div class="t m0 x1 h2 yf ff2 fs0 fc0 sc0 ls0 ws3">     <span class="ff4 ws2">{{ final_sum }}<span class="ls1 ws3"> </span></span></div>
+               <div class="t m0 x1 h2 y10 ff1 fs0 fc0 sc0 ls0">НАЛИЧНЫМИ<span class="ff2 ws3">     ={{ final_sum }}<span class="ls1"> </span></span></div>
                <div class="t m0 x1 h2 y11 ff2 fs0 fc0 sc0 ls0 ws2">***********************<span class="ls1 ws3"> </span></div>
                <div class="t m0 x1 h3 y12 ff2 fs0 fc0 sc0 ls0 ws3">       00003751# 05970<span class="ff5 fs1 ls1"> </span></div>
             </div>
