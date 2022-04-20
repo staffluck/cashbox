@@ -2,5 +2,12 @@ asgiref==3.5.0
 backports.zoneinfo==0.2.1
 Django==4.0.4
 djangorestframework==3.13.1
+flake8==4.0.1
+mccabe==0.6.1
+pdfkit==1.0.0
+Pillow==9.1.0
+pycodestyle==2.8.0
+pyflakes==2.4.0
 pytz==2022.1
+qrcode==7.3.1
 sqlparse==0.4.2
