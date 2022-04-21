@@ -15,7 +15,7 @@ from .serializers import ChequeIdsSerializer
 from .models import Cheque, Item
 
 
-def generate_qrcode(url: str) -> str:
+def generate_qrcode(url: str) -> SvgPathImage:
     factory = SvgPathImage
     img = qrcode.make(url, image_factory=factory)
     return img
@@ -48,6 +48,6 @@ class GenerateChequeAPIView(GenericAPIView):
         items = Item.objects.filter(id__in=serializer.data["items"])
         cheque = generate_cheque(items)
         url_to_cheque = request.build_absolute_uri(cheque.cheque.url)
-        qrcode_path = generate_qrcode(url_to_cheque)
+        qrcode_svg = generate_qrcode(url_to_cheque)
 
-        return HttpResponse(qrcode_path.to_string(), content_type="image/svg+xml")
+        return HttpResponse(qrcode_svg.to_string(), content_type="image/svg+xml")
