@@ -1,4 +1,5 @@
 from uuid import uuid4
+from typing import List
 
 from django.template.loader import render_to_string
 from django.utils import timezone
@@ -18,7 +19,7 @@ def generate_qrcode(url: str) -> str:
     img.save(f"media/{file_path}")
     return file_path
 
-def generate_cheque(items: Item, template="receipt.html") -> Cheque:
+def generate_cheque(items: List[Item], template="receipt.html") -> Cheque:
     final_sum = 0  # Раз SQL запрос и так выполнится для получения всех items(для шаблона), использовать aggregate нет смысла(если объектов не много)
     for item in items:
         final_sum += item.price
