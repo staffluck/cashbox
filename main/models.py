@@ -8,4 +8,3 @@ class Item(models.Model):
 
 class Cheque(models.Model):
     cheque = models.FileField("PDF чека", upload_to="cheques")
-    qrcode = models.ImageField("Изображение QRCode", upload_to="qrcodes")
